@@ -49,13 +49,13 @@ function App() {
         
       )} */}
 
-      {currentView === "hotel-details" && selectedHotel && (
-        <HotelDetails
-          hotel={selectedHotel}
-          onBack={handleBackToSearch}
-          onBooking={handleBookingComplete}
-        />
-      )}
+      {/* {currentView === "hotel-details" && selectedHotel && ( */}
+      {/* // <HotelDetails */}
+      {/* //   hotel={selectedHotel} */}
+      {/* //   onBack={handleBackToSearch} */}
+      {/* //   onBooking={handleBookingComplete} */}
+      {/* // /> */}
+      {/* // )} */}
 
       {currentView === "booking-confirmed" && (
         <div className="mt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-50">
