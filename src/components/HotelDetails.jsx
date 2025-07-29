@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import RoomCard from "./RoomCard";
 import BookingForm from "./BookingForm";
+import { useNavigate } from "react-router-dom";
 
 const amenityIcons = {
   "Free WiFi": Wifi,
@@ -26,6 +27,7 @@ const amenityIcons = {
 };
 
 const HotelDetails = ({ hotel, onBack, onBooking }) => {
+  const navigate = useNavigate();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [selectedRoomId, setSelectedRoomId] = useState(null);
@@ -58,11 +60,13 @@ const HotelDetails = ({ hotel, onBack, onBooking }) => {
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <button
-            onClick={onBack}
+            onClick={() => {
+              navigate("/");
+            }}
             className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors mb-4"
           >
             <ArrowLeft className="h-5 w-5" />
-            <span>Back to results</span>
+            <span>Back to Home</span>
           </button>
 
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
