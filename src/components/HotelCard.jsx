@@ -1,5 +1,6 @@
 import React from "react";
 import { Star, MapPin, Wifi, Car, Utensils, Heart } from "lucide-react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const amenityIcons = {
   "Free WiFi": Wifi,
@@ -8,12 +9,10 @@ const amenityIcons = {
   Parking: Car,
 };
 
-const HotelCard = ({ hotel, onSelect }) => {
+const HotelCard = ({ hotel }) => {
+  const navigate = useNavigate();
   return (
-    <div
-      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-2"
-      onClick={() => onSelect(hotel)}
-    >
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-2">
       <div className="relative overflow-hidden">
         <img
           src={hotel.image}
@@ -86,7 +85,10 @@ const HotelCard = ({ hotel, onSelect }) => {
             </span>
             <span className="text-sm text-gray-500">/ night</span>
           </div>
-          <button className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all transform hover:scale-105 font-semibold shadow-md">
+          <button
+            onClick={() => navigate(`/hotels/${hotel.id}`)}
+            className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-emerald-700 transition-all transform hover:scale-105 font-semibold shadow-md"
+          >
             View Details
           </button>
         </div>

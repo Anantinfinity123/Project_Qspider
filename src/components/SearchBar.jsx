@@ -27,7 +27,7 @@ const SearchBar = ({ onSearch, isVisible }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-white border-t border-gray-200 shadow-lg animate-in slide-in-from-top-5 duration-300">
+    <div className="bg-white mt-16 border-t border-gray-200 shadow-lg animate-in slide-in-from-top-5 duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

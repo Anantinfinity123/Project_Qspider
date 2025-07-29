@@ -160,13 +160,13 @@ export const popularDestinations = [
   {
     name: "Los Angeles",
     image:
-      "https://images.pexels.com/photos/161772/pexels-photo-161772.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://drupal-prod.visitcalifornia.com/sites/default/files/styles/fluid_1920/public/2020-06/VC_PlacesToVisit_LosAngelesCounty_RF_1170794243.jpg.webp?itok=46pJYz8v",
     hotels: 156,
   },
   {
     name: "Las Vegas",
     image:
-      "https://images.pexels.com/photos/161758/governor-of-poker-3-1001485-161758.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/01/00/2b/the-strip.jpg?w=600&h=400&s=1",
     hotels: 78,
   },
 ];

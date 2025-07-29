@@ -53,7 +53,7 @@ const HotelDetails = ({ hotel, onBack, onBooking }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 animate-in fade-in-50 duration-500">
+    <div className="mt-16 min-h-screen bg-gray-50 animate-in fade-in-50 duration-500">
       {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

@@ -6,11 +6,11 @@ const Header = ({ onSearchToggle }) => {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md relative z-50">
+    <header className="fixed top-0 z-50 bg-white shadow w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex item">
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
                 StayBooker
@@ -22,19 +22,19 @@ const Header = ({ onSearchToggle }) => {
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
-                href="#"
+                href="/"
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
-                Hotels
+                Home
               </a>
               <a
-                href="#"
+                href="/destinations"
                 className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Destinations
               </a>
               <a
-                href="#"
+                href="/deals"
                 className="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Deals
@@ -64,7 +64,9 @@ const Header = ({ onSearchToggle }) => {
                   className="flex items-center space-x-2 text-gray-500 hover:text-blue-600 p-2 transition-colors"
                 >
                   <User className="h-5 w-5" />
-                  <span className="text-sm font-medium">Account</span>
+                  <span className="text-sm font-medium hidden lg:inline">
+                    Profile
+                  </span>
                 </button>
 
                 {isUserMenuOpen && (
@@ -114,19 +116,19 @@ const Header = ({ onSearchToggle }) => {
         <div className="md:hidden bg-white border-t border-gray-200 animate-in slide-in-from-top-5 duration-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
-              href="#"
+              href="/"
               className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              Hotels
+              Home
             </a>
             <a
-              href="#"
+              href="/destinations"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600 transition-colors"
             >
               Destinations
             </a>
             <a
-              href="#"
+              href="/deals"
               className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-blue-600 transition-colors"
             >
               Deals
